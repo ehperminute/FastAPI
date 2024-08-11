@@ -21,7 +21,7 @@ def get_product_id(product_id: int):
     return {"error": f"product with id={product_id} not found"}
 
 @app.get("/products/search")
-def search_product(keyword: str="", category: str="", limit: int|None=None):
+def search_product(keyword: str = "", category: str = "", limit: int|None = None):
     response = []
     for product in sample_products:
         if len(response) == limit:
